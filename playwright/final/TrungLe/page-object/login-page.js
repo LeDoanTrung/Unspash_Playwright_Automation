@@ -18,4 +18,4 @@ export class LoginPage extends BasePage{
 
 }
 
-export default LoginPage
+

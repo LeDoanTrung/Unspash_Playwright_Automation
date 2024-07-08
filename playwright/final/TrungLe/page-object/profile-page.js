@@ -1,24 +1,22 @@
-import { Element } from "../core/element/element"
-import { BasePage } from "./base-page";
+import { Element } from "../core/element/element";
+import { EditProfilePage } from "./edit-profile-page";
 import { expect } from '../fixtures/page-fixture';
 
-export class ProfilePage extends BasePage{
+
+export class ProfilePage{
     constructor() {
-      super();
-      this.moreActionBtn = new Element("//button[@title='More Actions']/..");
-      this.followBtn = new Element("//button[@role='menuitem']");
+      this.editBtn = new Element("//a[text()='Edit profile']");     
     }
 
-    async followUser (){
-        await this.moreActionBtn.scrollToView()
-        await this.moreActionBtn.click();
-        await this.followBtn.click();
+    async goToEditProfilePage(){
+        await this.editBtn.click();
+        return new EditProfilePage();
     }
 
-    async isFollowed(){
-        const buttonText = await this.followBtn.getText()
-        await expect(buttonText.startsWith("Unfollow")).toBeTruthy();
-        //return to "unfollow" state after verifying
-        await this.followBtn.click();
+    async isAtProfilePage(fullname){
+        const fullNameLocator = `//div[text()='${fullname}']`;
+        const fullNameElement = new Element(fullNameLocator);
+        const isVisible = await fullNameElement.isVisible();
+        await expect(isVisible).toBeTruthy();
     }
 }

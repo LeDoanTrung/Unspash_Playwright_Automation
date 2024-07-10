@@ -4,6 +4,8 @@ import { HomePage } from "../page-object/home-page";
 import { UserPortfolioPage } from "../page-object/user-portfolio-page";
 import { ProfilePage } from "../page-object/profile-page";
 import { EditProfilePage } from "../page-object/edit-profile-page";
+import { APIClient } from "../core/api/api-client";
+import { ConfigurationHelper } from "../configurations/configuration";
 
 export const test = baseTest.extend({
     loginPage: async ({}, use) => {
@@ -20,7 +22,7 @@ export const test = baseTest.extend({
     },
     editProfilePage: async ({}, use) => {
         await use(new EditProfilePage());
-    }
+    },
 });
 
 export const expect = baseExpect

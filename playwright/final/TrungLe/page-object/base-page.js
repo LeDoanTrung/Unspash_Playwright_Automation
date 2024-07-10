@@ -14,7 +14,14 @@ export class BasePage{
     async waitForNavigation() {
         await BrowserManagement.page.waitForNavigation();
     }
-    
+
+    async waitForLoading(){
+        await BrowserManagement.page.waitForEvent('load');
+    }
+
+    async wait(time){
+        await BrowserManagement.page.waitForTimeout(time);
+    }
     async goToProfilePage(){
         await this.avatarIcon.click();
         await this.viewProfileBtn.click();

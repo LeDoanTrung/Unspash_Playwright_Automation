@@ -2,14 +2,17 @@ import { BasePage } from "./base-page"
 import { Element } from "../core/element/element"
 import { LoginPage } from "../page-object/login-page";
 import { UserPortfolioPage } from "./user-portfolio-page";
-import { ProfilePage } from "./profile-page";
-import { BrowserUtils } from "../core/browser/browser-utils";
-
-const imageLocator = (col, row) => `div[data-test="masonry-grid-count-three"] > div:nth-child(${col}) > figure:nth-child(${row})`;
+import { DataGenerator } from "../data-provider/data-provider";
+import { DataStorage } from "../share-data/data-storage";
 
 export class HomePage extends BasePage {
   constructor() {
     super();
+    this.imageLocator = (col, row) => `div[data-test="masonry-grid-count-three"] > div:nth-child(${col}) > figure:nth-child(${row})`;
+    this.likeIcon = new Element("//header//button[@title='Like this image']");
+    this.profileIcon = new Element("//header//img[contains(@alt,'Go to')]");
+    this.closeBtn = new Element("//div[@aria-label='Modal']/div/button");
+    this.imageModal = new Element("//button[@title='Zoom in on this image']/descendant::img[@alt]");
   }
 
   async goToLoginPage(){
@@ -23,7 +26,7 @@ export class HomePage extends BasePage {
     const row = Math.floor((value - 1) / columns) + 1;  
     const col = (value - 1) % columns + 1;  
 
-    return imageLocator(col, row);
+    return this.imageLocator(col, row);
   }
 
   async clickOnImage(value){
@@ -34,9 +37,22 @@ export class HomePage extends BasePage {
   }
 
   async goToPortfolioPage(){
-    await this.avatarIcon.hover();
+    await this.profileIcon.hover();
     await this.viewProfileBtn.click();
     return new UserPortfolioPage();
   }
 
+  async likeRandomPhotos(number){
+    for (let i = 0; i < number; i++) {
+      
+      await this.clickOnImage(DataGenerator.generateRandomNumber());
+      await this.likeIcon.click();
+
+      //Store to verify
+      const attributeValue = await this.imageModal.getAttribute('alt');
+      DataStorage.setData(attributeValue);
+
+      await this.closeBtn.click();
+    }
+  }
 }

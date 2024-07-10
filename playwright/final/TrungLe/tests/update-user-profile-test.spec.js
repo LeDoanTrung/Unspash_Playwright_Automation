@@ -1,6 +1,6 @@
 import { userData } from "../test-data/user-data";
 import {test, expect} from '../fixtures/page-fixture';
-import { DataGenerator } from "../data-provider/user-data-provider";
+import { DataGenerator } from "../data-provider/data-provider";
 
 let newUsername;
 
@@ -25,6 +25,7 @@ test('Update the username in the Profile page successfully @successfully', async
     await editProfilePage.editUserName(newUsername);
     await editProfilePage.isUpdateMessageDisplayed();
     
+    //Verify after updating username
     await homePage.goToProfilePageViaURL(newUsername);
     await profilePage.isAtProfilePage(userData.fullname);
 })

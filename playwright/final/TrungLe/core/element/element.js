@@ -18,11 +18,11 @@ export class Element{
     }
 
     async waitForElementToBeVisible(){
-        await this.waitForElement({state: 'visible', timeout: 5000});
+        await this.waitForElement({state: 'visible', timeout: 10000});
     }
 
     async waitForElementToBeHidden(){
-        await this.waitForElement({state: 'hidden', timeout: 5000});
+        await this.waitForElement({state: 'hidden', timeout: 10000});
     }
 
     async fillText(text){
@@ -51,6 +51,14 @@ export class Element{
 
     async scrollToView(){
         await BrowserManagement.page.locator(this.locator).scrollIntoViewIfNeeded();
+    }
+
+    async getAttribute(attributeName) {
+        return await BrowserManagement.page.locator(this.locator).getAttribute(attributeName);
+    }
+
+    static async findElements(locator) {
+        return await BrowserManagement.page.locator(locator).all();
     }
 }
 

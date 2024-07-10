@@ -6,7 +6,7 @@ export class UserPortfolioPage extends BasePage{
     constructor() {
       super();
       this.moreActionBtn = new Element("//button[@title='More Actions']/..");
-      this.followBtn = new Element("//button[@role='menuitem']");
+      this.followBtn = new Element("//button[@role='menuitem']/..");
     }
 
     async followUser (){
@@ -21,7 +21,7 @@ export class UserPortfolioPage extends BasePage{
     }
 
     async unfollowUser(){
-        await this.isFollowed()
+        await this.isFollowed();
         await this.followBtn.click();       
     }
 }

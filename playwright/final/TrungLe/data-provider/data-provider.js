@@ -12,6 +12,7 @@ export class DataGenerator {
         return `${username}${randomNumber}`;
     }
 
+    //Update test data after test
     static updateUsername(newUsername) {
         const userDataPath = path.resolve(__dirname, accountFilePath);
         
@@ -20,5 +21,10 @@ export class DataGenerator {
         userDataContent = userDataContent.replace(/"username"\s*:\s*".*?"/, `"username": "${newUsername}"`);
         
         fs.writeFileSync(userDataPath, userDataContent, 'utf8');
+    }
+
+    // Generate random number between 1 and 20
+    static generateRandomNumber() {
+        return faker.datatype.number({ min: 1, max: 20 });
     }
 }

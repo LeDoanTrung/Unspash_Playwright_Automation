@@ -40,7 +40,8 @@ export class ProfilePage{
         for (const image of images) {
             await image.click(); 
             const attributeValue = await this.imageModal.getAttribute('alt');
-
+            
+            //Verify image that matches the liked
             expect(attributeValue).toEqual(DataStorage.getData());
             await this.closeBtn.click();
         }

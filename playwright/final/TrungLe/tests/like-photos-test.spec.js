@@ -11,7 +11,7 @@ test('Verify like 03 random photos successfully @successfully', async({homePage,
     await loginPage.login(userData.email, userData.password);
 
     //Like 03 random photos
-    await homePage.wait(1000); // Wait for loading
+    await homePage.waitForLoading(); // Wait for loading
     await homePage.likeRandomPhotos(3);
     await homePage.goToProfilePageViaURL(userData.username);
     await profilePage.goToLikesTab();

@@ -3,7 +3,7 @@ import {test, expect} from '../fixtures/page-fixture';
 
 test.afterEach(async ({ userPortfolioPage }) => {
     //return the state to "unfollow" after verifying
-    await userPortfolioPage.unfollowUser({ timeout: 60000 });
+    await userPortfolioPage.unfollowUser();
   });
 
 test('Verify follow a photographer successfully @successfully', async({homePage})=>{

@@ -18,11 +18,11 @@ export class Element{
     }
 
     async waitForElementToBeVisible(){
-        await this.waitForElement({state: 'visible', timeout: 10000});
+        await this.waitForElement({state: 'visible', timeout: 5000});
     }
 
     async waitForElementToBeHidden(){
-        await this.waitForElement({state: 'hidden', timeout: 10000});
+        await this.waitForElement({state: 'hidden', timeout: 5000});
     }
 
     async fillText(text){
@@ -60,6 +60,8 @@ export class Element{
     static async findElements(locator) {
         return await BrowserManagement.page.locator(locator).all();
     }
+
+    static as
 }
 
 module.exports = { Element };

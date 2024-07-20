@@ -1,5 +1,5 @@
-import { userData } from "../test-data/user-data";
-import {test, expect} from '../fixtures/page-fixture';
+import { userData } from "../../test-data/user-data";
+import {test, expect} from '../../fixtures/page-fixture';
 
 test.afterEach(async ({ userPortfolioPage }) => {
     //return the state to "unfollow" after verifying

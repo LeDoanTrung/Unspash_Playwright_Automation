@@ -1,6 +1,6 @@
-import { userData } from "../test-data/user-data";
-import {test, expect} from '../fixtures/page-fixture';
-import { DataGenerator } from "../data-provider/data-provider";
+import { userData } from "../../test-data/user-data";
+import {test, expect} from '../../fixtures/page-fixture';
+import { DataGenerator } from "../../data-provider/data-provider";
 
 let newUsername;
 

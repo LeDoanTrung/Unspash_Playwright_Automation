@@ -4,4 +4,11 @@ export const APIConstants = {
 
     //Dislike photo endpoint
     DislikePhotoEndpoint : "/photos/{photoId}/like",
+
+    //Get photographer's profile
+    GetPhotographerProfile : "/users/{username}",
+
+    GetPhotographerPortfolioLink : "/users/{username}/portfolio",
+
+    GetPhotographerPhoto: "/users/{username}/photos",
 };

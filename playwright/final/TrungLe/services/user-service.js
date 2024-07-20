@@ -1,7 +1,4 @@
-import { APIConstants } from "../../constant/api-constant";
-import { APIClient } from "../api/api-client";
-import { ConfigurationHelper } from "../../configurations/configuration";
-import { Hooks } from "../../hooks/hooks";
+import { APIConstants } from "../constant/api-constant";
 
 export default class UserService {
 

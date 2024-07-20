@@ -1,9 +1,9 @@
-import {test, expect} from '../fixtures/page-fixture';
-import { userData } from "../test-data/user-data";
-import PhotoService from '../core/services/photo-service';
-import UserService from '../core/services/user-service';
-import { DataStorage } from '../share-data/data-storage';
-import { APIClient } from '../core/api/api-client';
+import {test, expect} from '../../fixtures/page-fixture';
+import { userData } from "../../test-data/user-data";
+import PhotoService from "../../services/photo-service";
+import UserService from '../../services/user-service';
+import { DataStorage } from '../../share-data/data-storage';
+import { APIClient } from '../../core/api/api-client';
 
 test('Verify like 03 random photos successfully @successfully', async({homePage, profilePage})=>{
 

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
+    "ajv": "^8.17.1",
     "axios": "^1.7.2",
     "express": "^4.19.2",
     "fetch-to-curl": "^0.6.0",

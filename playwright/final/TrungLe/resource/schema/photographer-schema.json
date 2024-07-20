@@ -22,16 +22,16 @@
       "type": "string"
     },
     "twitter_username": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "portfolio_url": {
-      "type": "string"
+      "type": ["string","null"]
     },
     "bio": {
-      "type": "string"
+      "type": ["string","null"]
     },
     "location": {
-      "type": "string"
+      "type": ["string","null"]
     },
     "links": {
       "type": "object",
@@ -88,7 +88,7 @@
       ]
     },
     "instagram_username": {
-      "type": "string"
+      "type": ["string","null"]
     },
     "total_collections": {
       "type": "number"
@@ -118,13 +118,13 @@
       "type": "object",
       "properties": {
         "instagram_username": {
-          "type": "string"
+          "type": ["string","null"]
         },
         "portfolio_url": {
-          "type": "string"
+          "type": ["string","null"]
         },
         "twitter_username": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "paypal_email": {}
       },
@@ -283,7 +283,7 @@
                     "type": "string"
                   },
                   "description": {
-                    "type": "string"
+                    "type": ["string", "null"]
                   },
                   "meta_title": {
                     "type": "string"
@@ -346,7 +346,7 @@
                         "type": "string"
                       },
                       "promoted_at": {
-                        "type": "string"
+                        "type": ["string", "null"]
                       },
                       "width": {
                         "type": "number"
@@ -361,7 +361,7 @@
                         "type": "string"
                       },
                       "description": {
-                        "type": "string"
+                        "type": ["string", "null"]
                       },
                       "alt_description": {
                         "type": "string"
@@ -507,16 +507,16 @@
                             "type": "string"
                           },
                           "twitter_username": {
-                            "type": "string"
+                            "type": ["string", "null"]
                           },
                           "portfolio_url": {
-                            "type": "string"
+                            "type": ["string","null"]
                           },
                           "bio": {
-                            "type": "string"
+                            "type": ["string","null"]
                           },
                           "location": {
-                            "type": "string"
+                            "type": ["string","null"]
                           },
                           "links": {
                             "type": "object",
@@ -573,7 +573,7 @@
                             ]
                           },
                           "instagram_username": {
-                            "type": "string"
+                            "type": ["string","null"]
                           },
                           "total_collections": {
                             "type": "number"
@@ -603,13 +603,13 @@
                             "type": "object",
                             "properties": {
                               "instagram_username": {
-                                "type": "string"
+                                "type": ["string","null"]
                               },
                               "portfolio_url": {
-                                "type": "string"
+                                "type": ["string","null"]
                               },
                               "twitter_username": {
-                                "type": "string"
+                                "type": ["string", "null"]
                               },
                               "paypal_email": {}
                             },
@@ -769,7 +769,7 @@
                     "type": "string"
                   },
                   "description": {
-                    "type": "string"
+                    "type": ["string", "null"]
                   },
                   "meta_title": {
                     "type": "string"
@@ -832,7 +832,7 @@
                         "type": "string"
                       },
                       "promoted_at": {
-                        "type": "string"
+                        "type": ["string", "null"]
                       },
                       "width": {
                         "type": "number"
@@ -847,7 +847,7 @@
                         "type": "string"
                       },
                       "description": {
-                        "type": "string"
+                        "type": ["string", "null"]
                       },
                       "alt_description": {
                         "type": "string"
@@ -1055,16 +1055,16 @@
                             "type": "string"
                           },
                           "twitter_username": {
-                            "type": "string"
+                            "type": ["string", "null"]
                           },
                           "portfolio_url": {
-                            "type": "string"
+                            "type": ["string","null"]
                           },
                           "bio": {
-                            "type": "string"
+                            "type": ["string","null"]
                           },
                           "location": {
-                            "type": "string"
+                            "type": ["string","null"]
                           },
                           "links": {
                             "type": "object",
@@ -1121,7 +1121,7 @@
                             ]
                           },
                           "instagram_username": {
-                            "type": "string"
+                            "type": ["string","null"]
                           },
                           "total_collections": {
                             "type": "number"
@@ -1151,13 +1151,13 @@
                             "type": "object",
                             "properties": {
                               "instagram_username": {
-                                "type": "string"
+                                "type": ["string","null"]
                               },
                               "portfolio_url": {
-                                "type": "string"
+                                "type": ["string","null"]
                               },
                               "twitter_username": {
-                                "type": "string"
+                                "type": ["string", "null"]
                               },
                               "paypal_email": {}
                             },

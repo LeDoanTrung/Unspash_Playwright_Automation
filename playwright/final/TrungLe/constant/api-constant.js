@@ -10,5 +10,7 @@ export const APIConstants = {
 
     GetPhotographerPortfolioLink : "/users/{username}/portfolio",
 
-    GetPhotographerPhoto: "/users/{username}/photos",
+    GetPhotographerPhotos: "/users/{username}/photos",
+
+    GetPhotographerLikedPhotos: "/users/{username}/likes"
 };
